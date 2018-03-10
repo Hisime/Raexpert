@@ -1,0 +1,37 @@
+body {
+  height: 100%;
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: 400;
+  color: @black;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*, *::before, *::after { box-sizing: inherit; }
+
+a {
+  color: @color-link;
+  text-decoration: none;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  @media (min-width: @screen-xl) {
+    padding-top: 80px;
+  }
+  &__content {
+    flex: 1 0 auto;
+    background-color: @light-grey;
+    background-image: url(../img/bg-texture.jpg);
+  }
+}
+
+.page-footer {
+  flex: 0 0 auto;
+}

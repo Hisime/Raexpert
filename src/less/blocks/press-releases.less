@@ -1,0 +1,106 @@
+.press-releases {
+  margin-top: 60px;
+
+  @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+    margin-top: 20px;
+  }
+
+  &__caption {
+    .list-reset();
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 5px solid @orange-247;
+  }
+
+  &__caption-item {
+    padding: 10px 25px;
+    font-weight:  @bold;
+    cursor: pointer;
+
+    @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+      width: 100%;
+    }
+
+    @media (min-width: @screen-md) and (max-width: @screen-lg-top) {
+      width: 50%;
+    }
+
+    @media (min-width: @screen-lg) and (max-width: @screen-xl-top) {
+       padding-right: 5px;
+       padding-left: 5px;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      margin-left: 3px;
+      border-top:  10px solid @orange-247;
+      border-right: 7px solid transparent;
+      border-left: 7px solid transparent;
+
+      @media (min-width: @screen-lg) and (max-width: @screen-xl-top) {
+        content: none;
+      }
+    }
+
+    &.active {
+      color: @white;
+      background-color: @orange-247;
+    }
+  }
+
+  &__wrapper-table {
+    max-height: 533px;
+    overflow-y: scroll;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    font-size: 15px;
+      tr {
+        border-left: 4px solid @white;
+          &:nth-child(odd) {
+            background-color: @beige;
+            border-left: 4px solid @orange-251;
+          }
+    }
+
+    td {
+      padding-top: 21px;
+      padding-bottom: 21px;
+    }
+
+     a {
+      color: @black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__table-left {
+    width: 19%;
+    padding-left: 20px;
+  }
+
+  &__table-right {
+    width: 81%;
+    padding-right: 60px;
+
+    @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+      padding: 10px;
+    }
+
+    @media (min-width: @screen-md) and (max-width: @screen-xl-top) {
+      padding: 15px;
+    }
+  }
+
+  &__content {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+}

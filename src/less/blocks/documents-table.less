@@ -1,0 +1,45 @@
+.documents-table {
+  margin-bottom: 54px;
+  width: 735px;
+  border-collapse: collapse;
+  font-size: 15px;
+
+  @media (min-width: @screen-xs) and (max-width: @screen-xl-top)  {
+    width: 100%;
+  }
+
+  &__header {
+    background-color: @light-grey-235;
+    font-size: 14px;
+    font-weight:  @bold;
+    text-align: left;
+    th {
+      padding: 12px 6px 12px 10px;
+    }
+  }
+
+  &__row {
+    &:hover {
+      background-color: @orange-254;
+    }
+    td {
+      padding: 7px 6px 7px 10px;
+    }
+  }
+
+  &__name {
+    width: 65.5%;
+  }
+
+  &__year {
+    width: 18%;
+  }
+
+  a {
+    color: @black;
+    text-decoration: underline;
+    &:hover {
+      color: @dark-orange;
+    }
+  }
+}

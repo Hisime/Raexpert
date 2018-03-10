@@ -1,0 +1,69 @@
+.consultation-table {
+  display: block;
+  border-collapse: collapse;
+  font-size: 14px;
+
+  @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+    overflow-x: scroll;
+  }
+
+  @media (min-width: @screen-xl) {
+    margin-bottom: 50px;
+  }
+
+  &__header {
+    text-align: left;
+    background-color: @light-grey-234;
+    >th {
+      padding: 5px 10px;
+      font-weight: @bold;
+    }
+  }
+
+  &__row {
+    line-height: 1.6;
+    >td {
+      padding:  26px 10px 0 10px;
+      vertical-align: top;
+    }
+  }
+
+  &__date {
+    width: 9%;
+  }
+
+  &__title {
+    width: 15%;
+  }
+
+  &__document {
+    width: 19%;
+  }
+
+  &__methodology {
+    width: 25%;
+  }
+
+  &__status {
+    width: 32%;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: @black;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+
+
+}

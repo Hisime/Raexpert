@@ -1,0 +1,28 @@
+.social {
+  .list-reset();
+  display: flex;
+
+  @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  &__item {
+    margin-right: 15px;
+    font-size: 0;
+    box-shadow: 0 0 12px 0 rgba(0,0,0,.35);
+    a {
+      display: inline-block;
+      .animation();
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+

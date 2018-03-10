@@ -1,0 +1,79 @@
+.page-footer {
+  background-color: @dark-grey;
+  font-size: 12px;
+  color: @cream;
+  padding-top: 27px;
+  padding-bottom: 22px;
+
+
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    position: relative;
+    margin-right: 42px;
+    font-size: 16px;
+    font-weight: @bold;
+    color: @bright-cream;
+    background-color: transparent;
+    border: none;
+    .animation();
+    &:hover {
+      color: @cream;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right:-42px;
+      width: 42px;
+      height: 34px;
+      background-image: url(../img/contacts-btn.png);
+    }
+  }
+
+  &__copyright {
+    margin: 0;
+    margin-left: 10px;
+    width: 24.5%;
+
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      width: 50%;
+      margin-left: 0;
+    }
+  }
+
+  &__address {
+    width: 31%;
+    margin: 0;
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      width: 50%;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__contacts {
+    width: 26%;
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      width: 50%;
+    }
+
+    @media (min-width: @screen-lg) and (max-width: @screen-xl-top) {
+      width: 23%;
+    }
+  }
+
+  &__link {
+    color: @cream;
+  }
+
+  &__contacts-row {
+    margin: 0;
+    + .page-footer__contacts-row {
+      margin-top: 7px;
+    }
+  }
+}

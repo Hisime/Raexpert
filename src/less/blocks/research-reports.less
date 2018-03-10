@@ -1,0 +1,73 @@
+.research-reports {
+  width: 100%;
+
+  a {
+    display: inline-block;
+    color: @black;
+    text-decoration: underline;
+    margin-right: 5px;
+      @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+        margin-right: 0;
+      }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: @bold;
+    background-color: @light-grey-234;
+
+    div {
+      padding: 18px 20px;
+
+      @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+        padding-right: 2px;
+        padding-left: 2px;
+      }
+    }
+  }
+
+  &__country {
+    width: 17%;
+
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      width: 40%;
+    }
+  }
+
+  &__latest {
+    width: 27%;
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      width: 30%;
+    }
+  }
+
+  &__prev {
+    width: 56%;
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      width: 30%;
+    }
+  }
+
+  &__item {
+    display: flex;
+      div {
+        padding: 11px 20px;
+        @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+          padding-right: 2px;
+          padding-left: 2px;
+      }
+    }
+
+    &:nth-child(even) {
+      background-color: @light-grey-245;
+      padding-top: 3px;
+      padding-bottom: 3px;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.rating-classes {
+
+  &__subtitle {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: @orange;
+    font-weight: @bold;
+  }
+
+  &__lvl {
+    font-weight: @bold;
+  }
+
+  p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    + .rating-classes__item {
+      margin-top: 45px;
+    }
+  }
+
+
+}

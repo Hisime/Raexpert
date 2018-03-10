@@ -1,0 +1,75 @@
+.calendar {
+
+  &__item {
+  }
+
+  &__content {
+    display: none;
+    margin-bottom: 40px;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: @orange;
+    border-bottom: 1px solid @white;
+    cursor: pointer;
+    .animation();
+
+    &:hover {
+      border-bottom: 1px solid @orange;
+    }
+  }
+
+  &__table {
+    width: 640px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    font-size: 15px;
+
+    @media (min-width: @screen-xs) and (max-width: 699px) {
+      width: auto;
+    }
+
+    td {
+      padding: 3px 10px;
+
+      @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+        padding: 4px;
+      }
+    }
+  }
+
+  &__table-country {
+    width: 34%;
+    @media (min-width: @screen-xs) and (max-width: 699px) {
+      width: auto;
+    }
+  }
+
+  &__table-row {
+    cursor: pointer;
+    &:hover {
+      background-color: @light-grey-247;
+    }
+  }
+
+  &__table-top-row {
+    background-color: @light-grey-234;
+    font-size: 13px;
+    cursor: default;
+    th {
+      padding: 13px 12px;
+      text-align: left;
+      @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+        padding: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.footer-inner {
+  border-top: 8px solid @orange-224;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+
+  &__copyright {
+    width: 35%;
+    margin: 0;
+    font-size: 17px;
+
+    @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: @screen-md) and (max-width: @screen-lg-top) {
+      width: 50%;
+    }
+  }
+
+  &__address {
+    width: 48%;
+    font-size: 15px;
+    @media (min-width: @screen-xs) and (max-width: @screen-md-top) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    @media (min-width: @screen-md) and (max-width: @screen-lg-top) {
+      width: 50%;
+    }
+
+    @media (min-width: @screen-lg) and (max-width: @screen-xl-top) {
+      width: 36%;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__btn {
+    padding-right: 65px;
+    padding-bottom: 25px;
+    font-size: 25px;
+    font-weight: @bold;
+    color: @violet;
+    background-color: transparent;
+    background-image: url(../img/contacts-inner.png);
+    background-repeat: no-repeat;
+    background-position: 100% 5px;
+    border: none;
+    .animation();
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__mail {
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

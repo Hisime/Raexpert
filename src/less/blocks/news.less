@@ -1,0 +1,133 @@
+.news {
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.35);
+  &__header {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid @white;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__header-link {
+    display: block;
+    padding-left: 20px;
+    font-size: 35px;
+    color: #000;
+    background-color: rgba(255,255,255,.6);
+    border-top: 3px solid @orange-247;
+    border-bottom: 3px solid @orange-247;
+    .animation();
+
+    @media (min-width: @screen-lg) and (max-width: @screen-xl-top) {
+      padding-left: 10px;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &:hover {
+      background-color: rgba(255,255,255,.9);
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      border-left: 15px solid @orange-247;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      margin-left: 5px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 17px;
+    font-size: 30px;
+    font-weight: @normal;
+    border-left: 3px solid @black;
+    &::first-letter {
+      font-weight: @bold;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    border-top: 8px solid @orange-247;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 1px;
+      width: 100%;
+      background-color: @white;
+      z-index: 10;
+    }
+  }
+
+  &__items {
+    text-align: right;
+    border-left: 3px solid @orange-247;
+    padding: 14px 26px 20px 20px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    text-align: left;
+
+    &:last-of-type {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__date {
+    margin: 0;
+    margin-bottom: 11px;
+    font-size: 14px;
+    font-weight: @bold;
+    color: @orange-247;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    line-height: 1.4;
+    font-size: 14px;
+    color: @black;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: -23px;
+      top: 5px;
+      width: 9px;
+      height: 6px;
+      border-left: 3px solid @white;
+      background-color: @black;
+    }
+  }
+
+  &__all-news-link {
+    position: relative;
+    margin-right: 20px;
+    font-size: 14px;
+    color: @black;
+    font-weight: @bold;
+    .animation();
+
+    &:hover {
+      color: @orange;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      right: -18px;
+      .arrow-right();
+    }
+  }
+}

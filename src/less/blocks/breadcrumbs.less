@@ -1,0 +1,21 @@
+.breadcrumbs {
+  background-color: @orange;
+  background-image: url(../img/breadcrumbs-bg.jpg);
+  padding-top: 55px;
+  padding-bottom: 55px;
+
+  @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 31px;
+    font-weight: @bolder;
+    color: @white;
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      font-size: 20px;
+    }
+  }
+}

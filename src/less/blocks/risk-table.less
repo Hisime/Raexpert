@@ -1,0 +1,66 @@
+.risk-table {
+  font-size: 15px;
+
+  @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+    font-size: 14px;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: @light-grey-234;
+    font-weight: @bold;
+    padding-top: 15px;
+    >div {
+      padding: 10px;
+    }
+
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      text-align: left;
+    }
+  }
+
+  &__row {
+    display: flex;
+    &:hover {
+      background-color: @orange-254;
+    }
+    >div {
+      padding: 10px;
+    }
+  }
+
+  &__weight {
+    width: 66%;
+    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
+      width: 44%;
+    }
+
+
+  }
+
+  &__steps {
+    width: 34%;
+
+    @media (min-width: @screen-xs) and (max-width: @screen-xl-top) {
+      width: 56%;
+    }
+
+
+  }
+
+  &__step {
+    display: inline-block;
+    width: 58px;
+    @media (min-width: @screen-xs) and (max-width: @screen-lg-top) {
+      width: 40px;
+    }
+  }
+
+  &__numbers {
+    margin-top: 20px;
+    margin-bottom: 22px;
+    text-align: left;
+  }
+}
